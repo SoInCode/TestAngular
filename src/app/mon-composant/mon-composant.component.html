@@ -1,0 +1,24 @@
+<p>mon-composant works!</p>
+
+<h2 [ngStyle]="{'color':color}">mon sous-titre</h2>
+<h3 [ngClass]="'bordure'">ma bordure</h3>
+
+<div *ngIf="ok">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, odit nihil? Error delectus qui iusto neque est,
+        et obcaecati at omnis, sit optio iste commodi voluptatum aperiam molestias nobis accusantium.
+    </p>
+</div>
+<ol>
+    <li *ngFor="let titre of titres">{{ titre }}</li>
+</ol>
+
+<div [ngSwitch]="messageCount">
+    <p *ngSwitchCase="0"> You have no message</p>
+    <p *ngSwitchCase="1">You have a message</p>
+    <p *ngSwitchDefault>You have some messages</p>
+</div>
+
+<button (click)="clickMeteo()">Météo</button>
+
+<h3>{{ temp }}</h3>
